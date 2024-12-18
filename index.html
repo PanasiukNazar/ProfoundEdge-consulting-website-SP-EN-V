@@ -40,6 +40,7 @@
 
         <!-- Main CSS File -->
         <link href="assets/css/main.css" rel="stylesheet" />
+        <link href="assets/css/thanks.css" rel="stylesheet" />
     </head>
 
     <body class="index-page">
@@ -976,9 +977,14 @@
                                             type="email"
                                             class="form-control"
                                             name="email"
+                                            id="email"
                                             placeholder="Your Email"
                                             required=""
                                         />
+                                        <div
+                                            id="result"
+                                            style="color: red; font-size: 12px"
+                                        ></div>
                                     </div>
 
                                     <div class="col-md-12">
@@ -1009,7 +1015,11 @@
                                             you!
                                         </div>
 
-                                        <button type="submit">
+                                        <button
+                                            type="submit"
+                                            id="submit"
+                                            onclick="sendForm()"
+                                        >
                                             Send Message
                                         </button>
                                     </div>
@@ -1109,6 +1119,28 @@
             </div>
         </footer>
 
+        <!-- Cookie banner -->
+        <div class="cookie-wrapper show">
+            <div>
+                <i class="bx bx-cookie"></i>
+                <h2 style="text-align: center">Cookie Consent</h2>
+            </div>
+
+            <div class="data">
+                <p>
+                    This website uses cookies to provide you with a superior and
+                    more relevant browsing experience on the site.
+                    <a href="#">Learn more...</a>
+                </p>
+            </div>
+
+            <div class="buttons">
+                <button class="cookie-button" id="acceptBtn">Accept</button>
+                <button class="cookie-button" id="declineBtn">Decline</button>
+            </div>
+        </div>
+        <!-- End Cookie banner -->
+
         <!-- Scroll Top -->
         <a
             href="#"
@@ -1133,5 +1165,7 @@
 
         <!-- Main JS File -->
         <script src="assets/js/main.js"></script>
+        <script src="assets/js/cookiebanner.js"></script>
+        <script src="assets/js/contact-form.js"></script>
     </body>
 </html>
